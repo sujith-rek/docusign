@@ -1,0 +1,39 @@
+.mat-mdc-form-field {
+  font-size: 14px;
+  width: 100%;
+}
+.Emoji {
+  margin: 30px 10px;
+  padding: 10px 40px;
+}
+
+.span {
+  width: 60px;
+  height: auto;
+}
+
+@media (max-width: 768px) {
+  .Emoji {
+    padding: 10px;
+  }
+}
+
+.Emoji-card {
+  position: fixed;
+  width: fit-content;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: #52af6e;
+  z-index: 9999;
+  border-radius: 5px;
+  box-shadow: 0 0 10px #ccc;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  button {
+    background-color: #1c8adb;
+  }
+}

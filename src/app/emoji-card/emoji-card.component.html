@@ -1,0 +1,42 @@
+<div class="EmojiCard">
+    <div class="Card-header">
+        <h2>Emoji
+            <span *ngIf="emojiHtmlCode[1] == undefined" [innerHTML]="emojiHtmlCode[0]"></span>
+            <span *ngIf="emojiHtmlCode[1] != undefined" [innerHTML]="emojiHtmlCode[0] + emojiHtmlCode[1]"></span>
+        </h2>
+        <button mat-icon-button (click)="closeCard()">
+            <mat-icon>close</mat-icon>
+        </button>
+    </div>
+    <div>
+        <div class="Card-field">
+
+            <label> Emoji Name</label>
+            <p>{{emojiName}}</p>
+        </div>
+        <div class="Card-field">
+
+            <label> Emoji Category</label>
+            <p>{{emojiCategory}}</p>
+        </div>
+        <div class="Card-field">
+
+            <label>Emoji Group</label>
+            <p>{{emojiGroup}}</p>
+        </div>
+        <div class="Card-field">
+
+            <label>Emoji HTML code</label>
+            <code *ngIf="emojiHtmlCode[1] == undefined">
+                {{emojiHtmlCode[0]}}
+            </code>
+            <code *ngIf="emojiHtmlCode[1] != undefined">
+                {{emojiHtmlCode[0] + emojiHtmlCode[1]}}
+            </code>
+        </div>
+        <div class="Card-field">
+            <label>Emoji Unicode</label>
+            <code>{{emojiunicode}}</code>
+        </div>
+    </div>
+</div>
