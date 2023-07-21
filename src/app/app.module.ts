@@ -17,6 +17,7 @@ import { CommonModule } from '@angular/common';
 import { HttpClientModule } from '@angular/common/http';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { EmojiListComponent } from './emoji-list/emoji-list.component';
+import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
 
 @NgModule({
   declarations: [
@@ -38,6 +39,7 @@ import { EmojiListComponent } from './emoji-list/emoji-list.component';
     MatIconModule,
     HttpClientModule,
     NgbModule,
+    MatProgressSpinnerModule,
   ],
   providers: [RouterModule],
   bootstrap: [AppComponent]

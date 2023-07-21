@@ -4,6 +4,7 @@ import { MatPaginator, MatPaginatorModule } from '@angular/material/paginator';
 import { MatSort, MatSortModule } from '@angular/material/sort';
 import { MatTableDataSource, MatTableModule } from '@angular/material/table';
 import { EmojiCardComponent } from '../emoji-card/emoji-card.component';
+import { ProgressSpinnerMode } from '@angular/material/progress-spinner';
 
 export type Emoji = {
   name: string;
@@ -36,6 +37,11 @@ export class EmojiListComponent implements AfterViewInit {
   emojiHtmlCode: string[] = [];
   emojiunicode: string[] = [];
 
+  showSpinner: boolean = false;
+
+  accent: string = 'accent';
+  indeterminate: ProgressSpinnerMode = 'indeterminate';
+
   dataSource = new MatTableDataSource<Emoji>();
 
   displayedColumns: string[] = ['emoji', 'category', 'group','name'];
@@ -49,11 +55,13 @@ export class EmojiListComponent implements AfterViewInit {
   }
 
   ngOnInit(): void {
+    this.showSpinner = true;
     this.http.get<Emoji[]>('https://emojihub.yurace.pro/api/all').subscribe((data) => {
       this.dataSource = new MatTableDataSource(data);
       this.dataSource.paginator = this.paginator;
       this.dataSource.sort = this.sort;
       console.log(data);
+      this.showSpinner = false;
     }
     );
   }

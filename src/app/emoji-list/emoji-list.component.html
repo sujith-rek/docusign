@@ -1,4 +1,13 @@
 <div class="Emoji">
+    <div class="Spinner" *ngIf="showSpinner">
+        <mat-progress-spinner
+        class="example-margin"
+        [color]="accent"
+        [mode]="indeterminate"
+        >
+        
+    </mat-progress-spinner>
+    </div>
     <div class="Emoji-card" *ngIf="showEmojiCard">
 
         <app-emoji-card [emojiName]="emojiName" [emojiCategory]="emojiCategory" [emojiGroup]="emojiGroup"
