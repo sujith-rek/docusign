@@ -37,3 +37,12 @@
     margin-bottom: 1rem;
     
 }
+
+
+
+@media (max-width: 768px) {
+  .EmojiCard {
+    width: 250px;
+  }
+    
+}
