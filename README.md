@@ -1,5 +1,8 @@
 # Emoji Viewer
 
+## How to Use
+All the emojis are listed directly in a table
+
 ## Deployment
 #### Install dependencies
 ```bash
