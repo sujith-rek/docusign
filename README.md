@@ -2,6 +2,7 @@
 
 ## How to Use
 All the emojis are listed directly in a table
+Click on a table field to show the emoji card having all the other details of that emoji
 
 ## Deployment
 #### Install dependencies
